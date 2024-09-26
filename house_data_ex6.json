@@ -32,7 +32,6 @@
 	  "prompt": "Enter your choice",  
       "answer_key": "location"
     },
-    // MODIFICAT:
     {
       "question": "Do you prefer a house for sale or for rent?",
 	  "type": "multichoice",
@@ -44,38 +43,30 @@
 	  "type": "numerical",
 	  "prompt": "Enter your income",  
       "answer_key": "price"
-      // Com fer que et trii el 35% només 
     },
     {
       "question": "What floor do you wish to live in?",
 	  "type": "numerical",
 	  "prompt": "Enter your choice",  
       "answer_key": "floor"
-      // Com fer que et trii aquell i superior 
     },
     {
       "question": "Do you wish to have a terrace?",
 	  "type": "multichoice", 
-    // its binary (Yes/ No)
 	  "prompt": "Enter your choice",  
     "answer_key": "terrace"
-      // Com fer que si es si, nomes si, pero si es no, tant si com no
     },
     {
       "question": "Do you wish to have an elevator?",
 	  "type": "multichoice", 
-    // its binary (Yes/ No)
 	  "prompt": "Enter your choice",  
     "answer_key": "elevator"
-      // Mateix mecanisme que l'anterior
     },
     {
       "question": "Do you wish to use it for commercial use",
 	  "type": "multichoice", 
-    // its binary (Yes/ No)
 	  "prompt": "Enter your choice",  
     "answer_key": "commercial use"
-      // Mateix mecanisme que l'anterior
     }
   ],
   "houses": [
