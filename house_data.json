@@ -2,7 +2,7 @@
   "start_messages": [
     "Welcome to the House Buying Assistant!",
     "Hello, I'm your House Buying Assistant, here to help!",
-    "Hi, I hope I can assist you in finding a new home. Let's do this!"
+    "Hi, I'm the House Buying Assistant, I hope I can assist you in finding a new home."
   ],
   "end_messages": [
     "Thank you for using the House Buying Assistant. Goodbye!",
