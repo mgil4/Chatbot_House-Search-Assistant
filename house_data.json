@@ -1,6 +1,15 @@
 {
-  "start_message": "Welcome to the House Buying Assistant!",
-  "end_message": "Thank you for using the House Buying Assistant. Goodbye!",
+  "start_messages": [
+    "Welcome to the House Buying Assistant!",
+    "Hello, I'm your House Buying Assistant, here to help!",
+    "Hi, I hope I can assist you in finding a new home. Let's do this!"
+  ],
+  "end_messages": [
+    "Thank you for using the House Buying Assistant. Goodbye!",
+    "It has been a pleasure helping you, see you soon!",
+    "I hope I was helpful. Good luck finding a new home!"
+  ],
+
   "questions": [
     {
       "question": "How many bedrooms do you need?",
@@ -31,6 +40,12 @@
 	  "type": "multichoice",
 	  "prompt": "Enter your choice",  
       "answer_key": "location"
+    },
+    {
+      "question": "Are you looking for house on sale or on rent?",
+	  "type": "multichoice",
+	  "prompt": "Enter your choice",  
+      "answer_key": "type"
     }
   ],
   "houses": [
