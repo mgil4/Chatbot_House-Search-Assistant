@@ -53,6 +53,25 @@
 	  "type": "numerical",
 	  "prompt": "Enter your choice (0 - 8 th floor)",  
       "answer_key": "floor"
+    },
+    
+    {
+      "question": "Do you wish to have a terrace?",
+	  "type": "multichoice", 
+	  "prompt": "Enter your choice (Yes / No)",  
+    "answer_key": "terrace"
+    },
+    {
+      "question": "Do you wish to have an elevator?",
+	  "type": "multichoice", 
+	  "prompt": "Enter your choice (Yes / No)",  
+    "answer_key": "elevator"
+    },
+    {
+      "question": "Do you wish to use it for commercial use?",
+	  "type": "multichoice", 
+	  "prompt": "Enter your choice (Yes / No)",  
+    "answer_key": "commercial use"
     }
     
   ],
