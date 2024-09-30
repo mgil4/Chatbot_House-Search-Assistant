@@ -46,7 +46,15 @@
 	  "type": "multichoice",
 	  "prompt": "Enter your choice",  
       "answer_key": "type"
+    },
+    
+    {
+      "question": "What floor do you wish to live in?",
+	  "type": "numerical",
+	  "prompt": "Enter your choice (0 - 8 th floor)",  
+      "answer_key": "floor"
     }
+    
   ],
   "houses": [
     {
