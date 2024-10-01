@@ -51,7 +51,7 @@
       "answer_key": "location"
     },
     {
-      "question": "Are you looking for house on sale or on rent?",
+      "question": "Are you looking for a house on sale or on rent?",
 	  "type": "multichoice",
 	  "prompt": "Enter your choice",  
       "answer_key": "type"
