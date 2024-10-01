@@ -68,19 +68,19 @@
       "question": "Do you wish to have a terrace?",
 	  "type": "multichoice", 
 	  "prompt": "Please type 'Yes' if you do and 'No' otherwise",  
-    "answer_key": "terrace"
+      "answer_key": "terrace"
     },
     {
       "question": "Do you need an elevator?",
 	  "type": "multichoice", 
 	  "prompt": "Please type 'Yes' if you do and 'No' otherwise",  
-    "answer_key": "elevator"
+      "answer_key": "elevator"
     },
     {
       "question": "Are you planning to use it for commercial use?",
 	  "type": "multichoice", 
 	  "prompt": "Please type 'Yes' if you do and 'No' otherwise",  
-    "answer_key": "commercial use"
+      "answer_key": "commercial use"
     }
     
   ],
