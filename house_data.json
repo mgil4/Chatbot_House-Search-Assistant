@@ -2,12 +2,21 @@
   "start_messages": [
     "Welcome to the House Buying Assistant!",
     "Hello, I'm your House Buying Assistant, here to help!",
-    "Hi, I'm the House Buying Assistant, I hope I can assist you in finding a new home."
+    "Hi, I'm the House Buying Assistant, I hope I can assist you in finding a new home.",
+    "Greetings! I'm here to guide you through your house search.",
+    "Hello! Looking for a new home? I'm here to assist.",
+    "Hey! Ready to find your dream house? Let's get started.",
+    "Hi there! I'm here to help you explore the best house options."
   ],
   "end_messages": [
     "Thank you for using the House Buying Assistant. Goodbye!",
     "It has been a pleasure helping you, see you soon!",
-    "I hope I was helpful. Good luck finding a new home!"
+    "I hope I was helpful. Good luck finding a new home!",
+    "Thank you for letting me assist you. Wishing you the best in your home search!",
+    "It was great helping you today. Good luck with your home journey!",
+    "I hope I made your house search a little easier. Best of luck!",
+    "Thank you for your time! Hope you find the perfect place soon!",
+    "Goodbye! Feel free to come back anytime for more house hunting help."
   ],
 
   "questions": [
