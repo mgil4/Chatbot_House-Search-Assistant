@@ -80,7 +80,7 @@
       "question": "Are you planning to use it for commercial use?",
 	  "type": "multichoice", 
 	  "prompt": "Please type 'Yes' if you do and 'No' otherwise",  
-      "answer_key": "commercial use"
+      "answer_key": "commercial_use"
     }
     
   ],
