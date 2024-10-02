@@ -77,7 +77,7 @@ def convert_k_to_number(value):
 def get_salary_for_rent():
     while True:
         try:
-            salary = float(input("What is your monthly salary in euros?\n"))
+            salary = float(input("\nWhat is your monthly salary in euros?\n"))
             return salary
         except ValueError:
             print("Please enter a valid number for your salary.\n")
@@ -123,10 +123,10 @@ try:
   print("#                                                #")
   print("##################################################\n")
   print(start_message)
-  print("In order to help you find your dream house, I'm going to ask you to answer some questions for me.\n\n")
+  print("In order to help you find your dream house, I'm going to ask you to answer some questions for me.\n")
   print("If you feel indiferent about a question, just type 'any'.\n")
   print("If at any time you want to stop the conversation, just type 'quit'.\n\n")
-  print("Lets roll!\n")
+  print("Lets roll!")
 
   user_preferences, available_options = {}, {} 
 
@@ -149,7 +149,8 @@ try:
 
   def print_suitable_houses(suitable_houses):
     if suitable_houses:
-      print("\nAlright! Based on your preferences, the most suitable houses for you are:\n")
+      print("\n#########################################################################\n")
+      print("Alright! Based on your preferences, the most suitable houses for you are:\n")
       for house in suitable_houses:
         print(f"House with ID", house['id'], "is currently for", house['type'],". It has", house['bedrooms'], "bedrooms and", house['bathrooms'], "bathrooms.")
         print("Its price is of exactly", house['price'], "euros and it has", house['square_meters'], "m^2.")

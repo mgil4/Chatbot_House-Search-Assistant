@@ -21,63 +21,63 @@
 
   "questions": [
     {
-      "question": "How many bedrooms would you like to have in your new home?",
+      "question": "\nHow many bedrooms would you like to have in your new home?",
       "type": "numerical",
-      "prompt": "Please choose between 1 and 5 bedrooms:\n",
+      "prompt": "Please enter a number of bedrooms between 1 and 5:\n",
       "answer_key": "bedrooms"
     },
     {
-      "question": "How many bathrooms do you need?",
+      "question": "\nHow many bathrooms do you need?",
       "type": "numerical",
       "prompt": "Enter your choice (1-3 bathrooms):\n",
       "answer_key": "bathrooms"
     },
     {
-      "question": "Do you have a budget in mind?",
+      "question": "\nDo you have a budget in mind?",
       "type": "numerical",
       "prompt": "Please enter your budget in euros (1k - 99k):\n",
       "answer_key": "price"
     },
     {
-      "question": "How many square meters do you need?",
+      "question": "\nHow many square meters do you need?",
 	  "type": "numerical",
 	  "prompt": "Enter your choice (30 - 200 meters):\n",
       "answer_key": "square_meters"
     },
     {
-      "question": "Which city or neighborhood would you prefer?",
+      "question": "\nWhich city or neighborhood would you prefer?",
 	  "type": "multichoice",
 	  "prompt": "Enter your choice:\n",  
       "answer_key": "location"
     },
     {
-      "question": "Are you looking for a house on sale or on rent?",
+      "question": "\nAre you looking for a house for sale or for rent?",
 	  "type": "multichoice",
 	  "prompt": "Enter your choice:\n",  
       "answer_key": "type"
     },
     
     {
-      "question": "What floor do you wish to live in?",
+      "question": "\nWhat floor do you wish to live in?",
 	  "type": "numerical",
 	  "prompt": "Enter your choice (0 - 8 th floor):\n",  
       "answer_key": "floor"
     },
     
     {
-      "question": "Do you wish to have a terrace?",
+      "question": "\nDo you wish to have a terrace?",
 	  "type": "multichoice", 
 	  "prompt": "Please type 'Yes' if you do and 'No' otherwise:\n",  
       "answer_key": "terrace"
     },
     {
-      "question": "Do you need an elevator?",
+      "question": "\nDo you need an elevator?",
 	  "type": "multichoice", 
 	  "prompt": "Please type 'Yes' if you do and 'No' otherwise:\n",  
       "answer_key": "elevator"
     },
     {
-      "question": "Are you planning to use it for commercial use?",
+      "question": "\nAre you planning to use it for commercial use?",
 	  "type": "multichoice", 
 	  "prompt": "Please type 'Yes' if you do and 'No' otherwise:\n",  
       "answer_key": "commercial_use"
