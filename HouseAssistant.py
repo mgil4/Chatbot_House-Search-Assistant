@@ -172,7 +172,8 @@ try:
   print_suitable_houses(suitable_houses)
 
   end_message = random.choice(data['end_messages'])
-  print("\n",end_message, '\n')
+  print()
+  print(end_message, '\n')
 
 except QuitException as e:
     print()
