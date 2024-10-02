@@ -47,7 +47,6 @@ def process_numerical_question(question):
     print_question(question['question']) 
     while True:
         answer = input(question['prompt'])  
-        print('                            ',answer)
         if str(answer).lower() == 'quit':
             raise QuitException(random.choice(data['end_messages']))
         elif answer.lower() == 'any':  
@@ -61,7 +60,6 @@ def process_multichoice_question(question, options):
     print_question(question['question'], options)  
     while True:
         answer = input(question['prompt']).lower()
-        print('                            ',answer)
         if str(answer).lower() == 'quit':
             raise QuitException(random.choice(data['end_messages']))
         elif answer.lower() == 'any':  
@@ -79,10 +77,10 @@ def convert_k_to_number(value):
 def get_salary_for_rent():
     while True:
         try:
-            salary = float(input("What is your monthly salary in euros?\n "))
+            salary = float(input("What is your monthly salary in euros?\n"))
             return salary
         except ValueError:
-            print("Please enter a valid number for your salary.")
+            print("Please enter a valid number for your salary.\n")
             
 def filter_houses_based_on_rent(houses, salary):
     max_rent = salary * 0.35
@@ -105,7 +103,6 @@ def find_suitable_houses(data, user_preferences):
         'commercial_use': lambda answer, house: house == 'Yes' if answer == 'Yes' else True  
         }
     
-
     for house in data['houses']:
         is_suitable = True
         for key, filter_func in filters.items():
@@ -131,7 +128,6 @@ try:
   print("If at any time you want to stop the conversation, just type 'quit'.\n\n")
   print("Lets roll!\n")
 
-
   user_preferences, available_options = {}, {} 
 
   initialize_available_options(data, available_options) 
@@ -151,10 +147,9 @@ try:
         salary = get_salary_for_rent()  # Cridem a la funció per obtenir el salari del client
         user_preferences['salary'] = salary  # Guardem el salari a les preferències del client
 
-
   def print_suitable_houses(suitable_houses):
     if suitable_houses:
-      print("\nAlright! Based on your preferences, the most suitable houses are:\n\n")
+      print("\nAlright! Based on your preferences, the most suitable houses for you are:\n")
       for house in suitable_houses:
         print(f"House with ID", house['id'], "is currently for", house['type'],". It has", house['bedrooms'], "bedrooms and", house['bathrooms'], "bathrooms.")
         print("Its price is of exactly", house['price'], "euros and it has", house['square_meters'], "m^2.")
@@ -162,8 +157,7 @@ try:
     else:
       print("\nSorry, I have found no suitable houses that match your preferences. \n")
 
-
-# Filtratge d'habitatges segons les preferències de l'usuari:
+  # Filtratge d'habitatges segons les preferències de l'usuari:
   if 'salary' in user_preferences:
       suitable_houses = filter_houses_based_on_rent(data['houses'], user_preferences['salary'])
   else:
@@ -172,8 +166,8 @@ try:
   print_suitable_houses(suitable_houses)
 
   end_message = random.choice(data['end_messages'])
-  print(end_message, '\n\n')
+  print(end_message, '\n')
 
 except QuitException as e:
-    print(e) 
+    print(e,"\n") 
     exit() 
