@@ -29,7 +29,7 @@
     {
       "question": "\nHow many bathrooms do you need?",
       "type": "numerical",
-      "prompt": "Enter your choice (1-3 bathrooms):\n",
+      "prompt": "Enter your choice (1 - 3 bathrooms):\n",
       "answer_key": "bathrooms"
     },
     {

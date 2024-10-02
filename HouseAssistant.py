@@ -1,12 +1,17 @@
+"""
+VERSIÓ FINAL DEL ASSISTENT VIRTUAL (XATBOT)
+
+Lola Monroy Mir i Maria Gil Casas | Tractament de Veu i Diàleg - GIA | Octubre, 2024
+"""
 import nltk
 import random
 import json
 import sys
 
-nltk.download('omw-1.4')
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('punkt')
+#nltk.download('omw-1.4')
+#nltk.download('stopwords')
+#nltk.download('wordnet')
+#nltk.download('punkt')
 
 from nltk.tokenize.treebank import TreebankWordTokenizer
 from nltk.corpus import stopwords
@@ -14,10 +19,11 @@ from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import TweetTokenizer
 
+# Importar la base de dades
 with open('house_data.json') as f:
   data = json.load(f)
 
-
+# Implementació de funcions per fer un Xat Bot interactiu que assisteixi en la recomanació d'habitatges segons les preferències:
 def print_question(prompt, possible_options = []):
     print(prompt)  # El chatbot imprimeix la pregunta 
     if not len(possible_options) == 0:  # En cas que la llista d'opcions NO estigui buida -> ha d'oferir opcions
@@ -37,7 +43,6 @@ def get_numerical_value(tok_answer): # Extreu valors numèrics de la resposta to
         if token.isnumeric() or token[:-1].isnumeric(): # Mira si el token és numèric o si sense l'ultim char ho és (per treure 'k' de 35k)
             return token 
     return '' # Només retorna un valor numèric si el troba, sinó retorna '' osigui res
-
 
 class QuitException(Exception):
     """Excepció personalitzada per quan l'usuari vol sortir de la conversa"""
@@ -157,9 +162,8 @@ try:
         print("It is located in", house['location'],'.\n')
     else:
       print("\nSorry, I have found no suitable houses that match your preferences. \n")
-
-  # Filtratge d'habitatges segons les preferències de l'usuari:
-  if 'salary' in user_preferences:
+  
+  if 'salary' in user_preferences: # Filtratge segons les preferències de l'usuari, tenint en compte el salari
       suitable_houses = filter_houses_based_on_rent(data['houses'], user_preferences['salary'])
   else:
       suitable_houses = find_suitable_houses(data, user_preferences)
@@ -167,8 +171,9 @@ try:
   print_suitable_houses(suitable_houses)
 
   end_message = random.choice(data['end_messages'])
-  print(end_message, '\n')
+  print("\n",end_message, '\n')
 
 except QuitException as e:
+    print()
     print(e,"\n") 
     exit() 
