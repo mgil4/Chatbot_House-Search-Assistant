@@ -8,6 +8,7 @@ import random
 import json
 import sys
 
+# Descomentar les següents línies en cas de no tenir-los descarregats
 #nltk.download('omw-1.4')
 #nltk.download('stopwords')
 #nltk.download('wordnet')
