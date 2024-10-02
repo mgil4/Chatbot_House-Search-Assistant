@@ -1,19 +1,18 @@
-from nltk.tokenize.treebank import TreebankWordTokenizer
 import nltk
+import random
+import json
+import sys
+
 nltk.download('omw-1.4')
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('punkt')
 
+from nltk.tokenize.treebank import TreebankWordTokenizer
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import TweetTokenizer
-
-import random
-
-import json
-import sys
 
 with open('house_data.json') as f:
   data = json.load(f)
@@ -80,7 +79,7 @@ def convert_k_to_number(value):
 def get_salary_for_rent():
     while True:
         try:
-            salary = float(input("What is your monthly salary in euros? "))
+            salary = float(input("What is your monthly salary in euros?\n "))
             return salary
         except ValueError:
             print("Please enter a valid number for your salary.")
@@ -89,8 +88,6 @@ def filter_houses_based_on_rent(houses, salary):
     max_rent = salary * 0.35
     affordable_houses = [house for house in houses if house['type'] == 'rent' and float(house['price']) <= max_rent]
     return affordable_houses
-
-
         
 def find_suitable_houses(data, user_preferences):
     suitable_houses = []
@@ -123,14 +120,16 @@ def find_suitable_houses(data, user_preferences):
 
 try:  
   start_message = random.choice(data['start_messages'])
+  print("\n##################################################")
+  print("#                                                #")
+  print("#     WELCOME TO THE HOUSE FINDING ASSISTANT     #")
+  print("#                                                #")
+  print("##################################################\n")
   print(start_message)
-  print()
-  print("In order to help you find your dream house, I'm going to ask you to answer some questions for me.")
-  print()
-  print("If you feel indiferent about a question, just type 'any'.")
-  print("If at any time you want to stop the conversation, just type 'quit'.")
-  print()
-  print("Lets roll!")
+  print("In order to help you find your dream house, I'm going to ask you to answer some questions for me.\n\n")
+  print("If you feel indiferent about a question, just type 'any'.\n")
+  print("If at any time you want to stop the conversation, just type 'quit'.\n\n")
+  print("Lets roll!\n")
 
 
   user_preferences, available_options = {}, {} 
@@ -155,13 +154,11 @@ try:
 
   def print_suitable_houses(suitable_houses):
     if suitable_houses:
-      print("\nAlright! Based on your preferences, the most suitable houses are:")
-      print()
+      print("\nAlright! Based on your preferences, the most suitable houses are:\n\n")
       for house in suitable_houses:
         print(f"House with ID", house['id'], "is currently for", house['type'],". It has", house['bedrooms'], "bedrooms and", house['bathrooms'], "bathrooms.")
         print("Its price is of exactly", house['price'], "euros and it has", house['square_meters'], "m^2.")
-        print("It is located in", house['location'])
-        print()
+        print("It is located in", house['location'],'.\n')
     else:
       print("\nSorry, I have found no suitable houses that match your preferences. \n")
 
@@ -175,7 +172,7 @@ try:
   print_suitable_houses(suitable_houses)
 
   end_message = random.choice(data['end_messages'])
-  print(end_message)
+  print(end_message, '\n\n')
 
 except QuitException as e:
     print(e) 
