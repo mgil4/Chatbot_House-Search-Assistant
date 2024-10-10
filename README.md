@@ -24,7 +24,7 @@ To run the project, you will need:
     cd TVD_Chatbot_P1
     ```
 
-## Usage
+## Usage:
 1. To start the chatbot, run:
     ```bash
     python HouseAssistant.py
